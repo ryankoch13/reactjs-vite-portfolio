@@ -150,7 +150,7 @@ a {
 .pill {
   width: fit-content;
   margin: 0 0 18px;
-  padding: 8px 12px;
+  padding: 8px 15px;
   border: 1px solid var(--border);
   border-radius: 999px;
   color: var(--muted-strong);
@@ -164,22 +164,33 @@ h2,
 h3,
 p {
   margin-top: 0;
+  color: var(--text)
 }
 
 h1 {
   max-width: 780px;
   margin-bottom: 24px;
-  font-size: clamp(3.4rem, 8vw, 7.6rem);
+  font-size: clamp(2.25rem, 5vw, 4.4rem);
   line-height: 0.9;
   letter-spacing: -0.085em;
 }
 
 h1 span,
 .sectionTitle {
+  max-width: 780px;
+  margin-bottom: 0;
+  font-size: clamp(2.25rem, 5vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  /* Prevent horizontal glyph clipping */
+  padding-inline: 0.06em;
+  margin-inline: -0.06em;
 }
 
 .heroDescription {
@@ -342,8 +353,17 @@ h1 span,
   max-width: 850px;
   margin-bottom: 0;
   font-size: clamp(2.25rem, 5vw, 4.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.07em;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* Prevent horizontal glyph clipping */
+  padding-inline: 0.06em;
+  margin-inline: -0.06em;
 }
 
 .aboutText {
@@ -405,12 +425,6 @@ h1 span,
     background 0.2s ease;
 }
 
-.projectCard:hover {
-  transform: translateY(-6px);
-  border-color: rgba(236, 72, 153, 0.45);
-  background: var(--surface-strong);
-}
-
 .projectCard h3 {
   margin-bottom: 14px;
   font-size: 1.45rem;
@@ -432,6 +446,200 @@ h1 span,
 .contactSection p {
   max-width: 680px;
   font-size: 1.05rem;
+}
+
+/* ----------------------------- */
+/* Polished Hover Interactions */
+/* ----------------------------- */
+
+.brand,
+.nav a,
+.themeToggle,
+.button,
+.glassCard,
+.projectCard,
+.statCard,
+.skillGroup,
+.skillTags span,
+.techStack span {
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+/* Nav underline effect */
+.nav a {
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Brand hover */
+.brand:hover {
+  transform: translateY(-2px);
+}
+
+.brand:hover .brandMark {
+  transform: rotate(-6deg) scale(1.06);
+}
+
+/* Button shimmer/glow */
+.button,
+.themeToggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before,
+.themeToggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+
+.button:hover::before,
+.themeToggle:hover::before {
+  transform: translateX(120%);
+}
+
+.button:hover,
+.themeToggle:hover {
+  transform: translateY(-3px);
+}
+
+/* Hero feature card hover */
+.featuredCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.featuredCard::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -45% -20%;
+  height: 55%;
+  background: var(--gradient);
+  filter: blur(48px);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.featuredCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(236, 72, 153, 0.42);
+}
+
+.featuredCard:hover::after {
+  opacity: 0.22;
+}
+
+/* Skill card hover */
+.skillGroup:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.42);
+  background: var(--surface-strong);
+}
+
+.skillGroup:hover .skillTags span {
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+/* Individual skill tag hover */
+.skillTags span:hover,
+.techStack span:hover {
+  transform: translateY(-2px) scale(1.03);
+  border-color: rgba(236, 72, 153, 0.55);
+}
+
+/* Project card hover upgrade */
+.projectCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.projectCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(139, 92, 246, 0.22), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.2), transparent 30%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(236, 72, 153, 0.48);
+  background: var(--surface-strong);
+}
+
+.projectCard:hover::before {
+  opacity: 1;
+}
+
+.projectCard > * {
+  position: relative;
+  z-index: 1;
+}
+
+.projectCard:hover h3 {
+  color: var(--muted-strong);
+}
+
+.projectCard:hover .techStack span {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+/* Stats hover */
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.42);
+  background: var(--surface-strong);
+}
+
+.statCard:hover strong {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(56, 189, 248, 0.65);
+  outline-offset: 4px;
 }
 
 @media (max-width: 980px) {
@@ -502,7 +710,11 @@ h1 span,
   }
 
   h1 {
-    font-size: clamp(3.1rem, 17vw, 5.1rem);
+      max-width: 780px;
+  margin-bottom: 24px;
+  font-size: clamp(3.4rem, 8vw, 7.6rem);
+  line-height: 1;
+  letter-spacing: -0.075em;
   }
 
   .heroActions,
