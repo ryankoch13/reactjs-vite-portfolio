@@ -30,6 +30,30 @@
   --shadow: 0 24px 90px rgba(99, 102, 241, 0.18);
 }
 
+[data-scheme="aurora"] {
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+  --blue: #38bdf8;
+}
+
+[data-scheme="violet"] {
+  --purple: #7c3aed;
+  --pink: #c084fc;
+  --blue: #60a5fa;
+}
+
+[data-scheme="cyber"] {
+  --purple: #a855f7;
+  --pink: #f472b6;
+  --blue: #22d3ee;
+}
+
+[data-scheme="sunset"] {
+  --purple: #9333ea;
+  --pink: #fb7185;
+  --blue: #f59e0b;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -134,6 +158,20 @@ a {
   font-weight: 800;
   box-shadow: var(--shadow);
 }
+.schemeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: var(--text);
+  background: var(--surface);
+  cursor: pointer;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+}
 
 .section {
   padding: 96px 0;
@@ -224,6 +262,9 @@ h1 span,
 
 .button:hover,
 .themeToggle:hover {
+  transform: translateY(-2px);
+}
+.schemeToggle:hover {
   transform: translateY(-2px);
 }
 
@@ -455,6 +496,7 @@ h1 span,
 .brand,
 .nav a,
 .themeToggle,
+.schemeToggle,
 .button,
 .glassCard,
 .projectCard,
@@ -505,6 +547,36 @@ h1 span,
 }
 
 /* Button shimmer/glow */
+.button,
+.schemeToggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before,
+.schemeToggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+
+.button:hover::before,
+.schemeToggle:hover::before {
+  transform: translateX(120%);
+}
+
+.button:hover,
+.schemeToggle:hover {
+  transform: translateY(-3px);
+}
 .button,
 .themeToggle {
   position: relative;

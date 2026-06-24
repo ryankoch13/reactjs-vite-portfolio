@@ -8,7 +8,13 @@ const skills = [
   },
   {
     category: "Mobile",
-    items: ["React Native", "iOS", "Android", "Mobile UI", "App Store Releases"],
+    items: [
+      "React Native",
+      "iOS",
+      "Android",
+      "Mobile UI",
+      "App Store Releases",
+    ],
   },
   {
     category: "Cross-Platform",
@@ -49,6 +55,25 @@ export default function App() {
     return localStorage.getItem("portfolio-theme") || "dark";
   });
 
+  const colorSchemes = ["aurora", "violet", "cyber", "sunset"];
+
+  const [colorScheme, setColorScheme] = useState(() => {
+    return localStorage.getItem("portfolio-color-scheme") || "aurora";
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-scheme", colorScheme);
+    localStorage.setItem("portfolio-color-scheme", colorScheme);
+  }, [colorScheme]);
+
+  const changeColorScheme = () => {
+    setColorScheme((currentScheme) => {
+      const currentIndex = colorSchemes.indexOf(currentScheme);
+      const nextIndex = (currentIndex + 1) % colorSchemes.length;
+      return colorSchemes[nextIndex];
+    });
+  };
+
   const isDark = theme === "dark";
 
   useEffect(() => {
@@ -74,16 +99,26 @@ export default function App() {
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <div className="headerActions">
+          <button
+            className="schemeToggle"
+            onClick={changeColorScheme}
+            aria-label="Change color scheme"
+          >
+            🎨
+            <span className="themeText">Color</span>
+          </button>
 
-        <button
-          className="themeToggle"
-          onClick={() => setTheme(isDark ? "light" : "dark")}
-          aria-label={themeLabel}
-          aria-pressed={!isDark}
-        >
-          <span>{isDark ? "☀️" : "🌙"}</span>
-          <span className="themeText">{isDark ? "Light" : "Dark"}</span>
-        </button>
+          <button
+            className="themeToggle"
+            onClick={() => setTheme(isDark ? "light" : "dark")}
+            aria-label={themeLabel}
+            aria-pressed={!isDark}
+          >
+            <span>{isDark ? "☀️" : "🌙"}</span>
+            <span className="themeText">{isDark ? "Light" : "Dark"}</span>
+          </button>
+        </div>
       </header>
 
       <main>
@@ -157,16 +192,16 @@ export default function App() {
           <div className="aboutText">
             <p>
               I specialize in building modern web and mobile applications with a
-              focus on maintainability, performance, and polished interfaces.
-              My work sits at the intersection of frontend engineering, mobile
+              focus on maintainability, performance, and polished interfaces. My
+              work sits at the intersection of frontend engineering, mobile
               architecture, and product execution.
             </p>
 
             <p>
               I enjoy taking complex requirements and turning them into clear,
               reliable, user-friendly experiences. Whether I’m building a
-              responsive web interface or debugging a tricky native mobile issue,
-              I care about details that make software feel professional.
+              responsive web interface or debugging a tricky native mobile
+              issue, I care about details that make software feel professional.
             </p>
           </div>
         </section>
@@ -230,7 +265,10 @@ export default function App() {
           </p>
 
           <div className="contactActions">
-            <a className="button primary" href="mailto:completemilage@gmail.com">
+            <a
+              className="button primary"
+              href="mailto:completemilage@gmail.com"
+            >
               Email Me
             </a>
 
