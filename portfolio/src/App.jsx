@@ -28,10 +28,17 @@ const skills = [
 
 const projects = [
   {
-    title: "Digital Identity Mobile App",
+    title: "Alliance Ops",
     description:
-      "Production React Native application focused on secure credentials, authentication flows, and cross-platform mobile experiences.",
-    impact: "Built for real-world iOS and Android users",
+      "Production ready React Native mobile dashboard for managing strategy-game alliance operations.",
+    impact: "Helps leaders track members, assign event roles, and monitor weekly participation",
+    tech: ["React Native", "TypeScript", "Expo", "iOS", "Android"],
+  },
+  {
+    title: "Ryn",
+    description:
+      "React Native application that allows users to connect and chat.",
+    impact: "Build connections and relationships through an easy to use interface",
     tech: ["React Native", "TypeScript", "iOS", "Android"],
   },
   {
@@ -40,13 +47,6 @@ const projects = [
       "Reusable UI and architecture patterns designed to improve consistency, speed up development, and support scalable mobile products.",
     impact: "Improved development velocity and UI consistency",
     tech: ["React", "React Native", "TypeScript", "Kotlin"],
-  },
-  {
-    title: "Modern Portfolio Website",
-    description:
-      "Responsive personal site built to showcase engineering experience, technical skills, and polished frontend implementation.",
-    impact: "Optimized for recruiters and hiring teams",
-    tech: ["React", "CSS", "JavaScript"],
   },
 ];
 
@@ -267,14 +267,14 @@ export default function App() {
           <div className="contactActions">
             <a
               className="button primary"
-              href="mailto:completemilage@gmail.com"
+              href="mailto:ryan@ryankoch.me"
             >
               Email Me
             </a>
 
             <a
               className="button secondary"
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/ryan-koch13/"
               target="_blank"
               rel="noreferrer"
             >
@@ -283,7 +283,7 @@ export default function App() {
 
             <a
               className="button secondary"
-              href="https://github.com/"
+              href="https://github.com/ryankoch13"
               target="_blank"
               rel="noreferrer"
             >
