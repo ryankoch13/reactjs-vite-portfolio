@@ -44,7 +44,7 @@ const projects = [
   {
     title: "Cross-Platform Component Toolkit",
     description:
-      "Reusable UI and architecture patterns designed to improve consistency, speed up development, and support scalable mobile products.",
+      "Reusable components designed to improve consistency, speed up development, and support scalable mobile products.",
     impact: "Improved development velocity and UI consistency",
     tech: ["React", "React Native", "TypeScript", "Kotlin"],
   },
