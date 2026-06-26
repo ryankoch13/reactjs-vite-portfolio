@@ -127,16 +127,16 @@ export default function App() {
       <main>
         <section id="home" className="hero section">
           <div className="heroCopy">
-
             <h1>
               I build practical, production-ready apps with{" "}
-<span>React, React Native, and TypeScript.</span>
+              <span>React, React Native, and TypeScript.</span>
             </h1>
 
             <p className="heroDescription">
-              I’m a mobile-focused engineer who turns complex product requirements
-into reliable, user-friendly applications. I care about clean code,
-smooth interfaces, and software that holds up in the real world.
+              I’m a mobile-focused engineer who turns complex product
+              requirements into reliable, user-friendly applications. I care
+              about clean code, smooth interfaces, and software that holds up in
+              the real world.
             </p>
 
             <div className="heroActions">
@@ -149,7 +149,10 @@ smooth interfaces, and software that holds up in the real world.
             </div>
           </div>
 
-          <aside className="heroPanel section" aria-label="Professional highlights">
+          <aside
+            className="heroPanel section"
+            aria-label="Professional highlights"
+          >
             <div className="orb orbOne" />
             <div className="orb orbTwo" />
 
@@ -157,8 +160,9 @@ smooth interfaces, and software that holds up in the real world.
               <p className="cardLabel">What I Do Best</p>
               <h2>Mobile engineering for real-world products</h2>
               <p>
-                React Native, TypeScript, debugging native issues, building reusable
-  UI systems, and shipping reliable apps across iOS and Android.
+                React Native, TypeScript, debugging native issues, building
+                reusable UI systems, and shipping reliable apps across iOS and
+                Android.
               </p>
             </div>
 
@@ -186,24 +190,26 @@ smooth interfaces, and software that holds up in the real world.
         <section id="about" className="section aboutSection">
           <div>
             <h2 className="sectionTitle">
-             Looking for a mobile engineer who can help ship?
+              Looking for a mobile engineer who can help ship?
             </h2>
           </div>
 
           <div className="aboutText">
             <p>
-  I specialize in building mobile and web applications with React Native,
-  React, TypeScript, and modern frontend tooling. My work usually sits
-  somewhere between product development, UI implementation, architecture,
-  and the occasional very stubborn native mobile bug.
-</p>
+              I specialize in building mobile and web applications with React
+              Native, React, TypeScript, and modern frontend tooling. My work
+              usually sits somewhere between product development, UI
+              implementation, architecture, and the occasional very stubborn
+              native mobile bug.
+            </p>
 
-<p>
-  I like building software that is clean under the hood and easy to use
-  on the surface. Whether I’m improving an existing app, creating reusable
-  components, or taking a feature from idea to release, I focus on making
-  the end result reliable, maintainable, and genuinely useful.
-</p>
+            <p>
+              I like building software that is clean under the hood and easy to
+              use on the surface. Whether I’m improving an existing app,
+              creating reusable components, or taking a feature from idea to
+              release, I focus on making the end result reliable, maintainable,
+              and genuinely useful.
+            </p>
           </div>
         </section>
 
@@ -252,22 +258,16 @@ smooth interfaces, and software that holds up in the real world.
         </section>
 
         <section id="contact" className="section contactSection">
+          <h2 className="sectionTitle">Let’s build something useful.</h2>
 
-          <h2 className="sectionTitle">
-  Let’s build something useful.
-</h2>
-
-<p>
-  I’m open to React Native, mobile, and frontend engineering roles where I
-  can contribute to practical products, strong user experiences, and reliable
-  cross-platform applications.
-</p>
+          <p>
+            I’m open to React Native, mobile, and frontend engineering roles
+            where I can contribute to practical products, strong user
+            experiences, and reliable cross-platform applications.
+          </p>
 
           <div className="contactActions">
-            <a
-              className="button primary"
-              href="mailto:ryan@ryankoch.me"
-            >
+            <a className="button primary" href="mailto:ryan@ryankoch.me">
               Email Me
             </a>
 
