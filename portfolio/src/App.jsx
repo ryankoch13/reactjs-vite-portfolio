@@ -124,7 +124,6 @@ export default function App() {
       <main>
         <section id="home" className="hero section">
           <div className="heroCopy">
-            <p className="pill">Mobile & Frontend Engineer</p>
 
             <h1>
               I build polished apps with{" "}
@@ -147,7 +146,7 @@ export default function App() {
             </div>
           </div>
 
-          <aside className="heroPanel" aria-label="Professional highlights">
+          <aside className="heroPanel section" aria-label="Professional highlights">
             <div className="orb orbOne" />
             <div className="orb orbTwo" />
 
@@ -183,7 +182,6 @@ export default function App() {
 
         <section id="about" className="section aboutSection">
           <div>
-            <p className="pill">About Me</p>
             <h2 className="sectionTitle">
               A developer who cares about both code quality and user experience.
             </h2>
@@ -208,7 +206,6 @@ export default function App() {
 
         <section id="skills" className="section">
           <div className="sectionHeader">
-            <p className="pill">Skills</p>
             <h2 className="sectionTitle">Technical toolkit</h2>
           </div>
 
@@ -229,7 +226,6 @@ export default function App() {
 
         <section id="projects" className="section">
           <div className="sectionHeader">
-            <p className="pill">Projects</p>
             <h2 className="sectionTitle">Selected work</h2>
           </div>
 
@@ -253,7 +249,6 @@ export default function App() {
         </section>
 
         <section id="contact" className="section contactSection">
-          <p className="pill">Contact</p>
 
           <h2 className="sectionTitle">
             Interested in building something together?
