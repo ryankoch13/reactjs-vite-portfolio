@@ -66,9 +66,21 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.26), transparent 30%),
-    radial-gradient(circle at 85% 15%, rgba(236, 72, 153, 0.2), transparent 28%),
-    radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.14), transparent 34%),
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(139, 92, 246, 0.26),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(236, 72, 153, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(56, 189, 248, 0.14),
+      transparent 34%
+    ),
     var(--bg);
   color: var(--text);
   font-family:
@@ -202,7 +214,7 @@ h2,
 h3,
 p {
   margin-top: 0;
-  color: var(--text)
+  color: var(--text);
 }
 
 h1 {
@@ -663,8 +675,16 @@ h1 span,
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at top left, rgba(139, 92, 246, 0.22), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.2), transparent 30%);
+    radial-gradient(
+      circle at top left,
+      rgba(139, 92, 246, 0.22),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(56, 189, 248, 0.2),
+      transparent 30%
+    );
   opacity: 0;
   transition: opacity 0.28s ease;
   pointer-events: none;
@@ -782,11 +802,19 @@ button:focus-visible {
   }
 
   h1 {
-      max-width: 780px;
-  margin-bottom: 24px;
-  font-size: clamp(3.4rem, 8vw, 7.6rem);
-  line-height: 1;
-  letter-spacing: -0.075em;
+    max-width: 780px;
+    margin-bottom: 24px;
+    font-size: clamp(3.4rem, 8vw, 7.6rem);
+    line-height: 1;
+    letter-spacing: -0.075em;
+  }
+
+  h1 span {
+    max-width: 780px;
+    margin-bottom: 24px;
+    font-size: clamp(3.4rem, 8vw, 7.6rem);
+    line-height: 1;
+    letter-spacing: -0.075em;
   }
 
   .heroActions,
