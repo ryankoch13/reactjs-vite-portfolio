@@ -30,22 +30,25 @@ const projects = [
   {
     title: "Alliance Ops",
     description:
-      "Production ready React Native mobile dashboard for managing strategy-game alliance operations.",
-    impact: "Helps leaders track members, assign event roles, and monitor weekly participation",
+      "A React Native mobile dashboard designed to help strategy-game alliance leaders manage members, roles, events, and weekly participation from one place.",
+    impact:
+      "Built around real alliance management workflows, not just a demo concept",
     tech: ["React Native", "TypeScript", "Expo", "iOS", "Android"],
   },
   {
     title: "Ryn",
     description:
-      "React Native application that allows users to connect and chat.",
-    impact: "Build connections and relationships through an easy to use interface",
+      "A mobile chat application focused on simple connection flows, clean messaging screens, and a smooth cross-platform user experience.",
+    impact:
+      "Designed to make connecting and communicating feel fast and approachable",
     tech: ["React Native", "TypeScript", "iOS", "Android"],
   },
   {
     title: "Cross-Platform Component Toolkit",
     description:
-      "Reusable components designed to improve consistency, speed up development, and support scalable mobile products.",
-    impact: "Improved development velocity and UI consistency",
+      "A reusable component system built to improve UI consistency, reduce duplicated work, and support scalable mobile product development.",
+    impact:
+      "Helps teams move faster while keeping interfaces consistent across apps",
     tech: ["React", "React Native", "TypeScript", "Kotlin"],
   },
 ];
@@ -124,16 +127,16 @@ export default function App() {
       <main>
         <section id="home" className="hero section">
           <div className="heroCopy">
-
             <h1>
-              I build polished apps with{" "}
+              I build practical, production-ready apps with{" "}
               <span>React, React Native, and TypeScript.</span>
             </h1>
 
             <p className="heroDescription">
-              I’m a product-minded engineer focused on clean architecture,
-              responsive interfaces, scalable mobile apps, and user experiences
-              that feel fast, thoughtful, and reliable.
+              I’m a mobile-focused engineer who turns complex product
+              requirements into reliable, user-friendly applications. I care
+              about clean code, smooth interfaces, and software that holds up in
+              the real world.
             </p>
 
             <div className="heroActions">
@@ -146,16 +149,20 @@ export default function App() {
             </div>
           </div>
 
-          <aside className="heroPanel section" aria-label="Professional highlights">
+          <aside
+            className="heroPanel section"
+            aria-label="Professional highlights"
+          >
             <div className="orb orbOne" />
             <div className="orb orbTwo" />
 
             <div className="glassCard featuredCard">
-              <p className="cardLabel">Core Strength</p>
-              <h2>Cross-platform product engineering</h2>
+              <p className="cardLabel">What I Do Best</p>
+              <h2>Mobile engineering for real-world products</h2>
               <p>
-                React Native, React, TypeScript, reusable systems, debugging,
-                and shipping production-ready mobile experiences.
+                React Native, TypeScript, debugging native issues, building
+                reusable UI systems, and shipping reliable apps across iOS and
+                Android.
               </p>
             </div>
 
@@ -183,23 +190,25 @@ export default function App() {
         <section id="about" className="section aboutSection">
           <div>
             <h2 className="sectionTitle">
-              A developer who cares about both code quality and user experience.
+              Looking for a mobile engineer who can help ship?
             </h2>
           </div>
 
           <div className="aboutText">
             <p>
-              I specialize in building modern web and mobile applications with a
-              focus on maintainability, performance, and polished interfaces. My
-              work sits at the intersection of frontend engineering, mobile
-              architecture, and product execution.
+              I specialize in building mobile and web applications with React
+              Native, React, TypeScript, and modern frontend tooling. My work
+              usually sits somewhere between product development, UI
+              implementation, architecture, and the occasional very stubborn
+              native mobile bug.
             </p>
 
             <p>
-              I enjoy taking complex requirements and turning them into clear,
-              reliable, user-friendly experiences. Whether I’m building a
-              responsive web interface or debugging a tricky native mobile
-              issue, I care about details that make software feel professional.
+              I like building software that is clean under the hood and easy to
+              use on the surface. Whether I’m improving an existing app,
+              creating reusable components, or taking a feature from idea to
+              release, I focus on making the end result reliable, maintainable,
+              and genuinely useful.
             </p>
           </div>
         </section>
@@ -249,21 +258,16 @@ export default function App() {
         </section>
 
         <section id="contact" className="section contactSection">
-
-          <h2 className="sectionTitle">
-            Interested in building something together?
-          </h2>
+          <h2 className="sectionTitle">Let’s build something useful.</h2>
 
           <p>
-            I’m open to frontend, mobile, and React Native engineering
-            opportunities where I can help create thoughtful, polished products.
+            I’m open to React Native, mobile, and frontend engineering roles
+            where I can contribute to practical products, strong user
+            experiences, and reliable cross-platform applications.
           </p>
 
           <div className="contactActions">
-            <a
-              className="button primary"
-              href="mailto:ryan@ryankoch.me"
-            >
+            <a className="button primary" href="mailto:ryan@ryankoch.me">
               Email Me
             </a>
 
