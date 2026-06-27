@@ -47,7 +47,7 @@ const projects = [
       "A mobile chat application focused on simple connection flows, clean messaging screens, and a smooth cross-platform user experience.",
     impact:
       "Designed to make connecting and communicating feel fast and approachable",
-    tech: ["React Native", "TypeScript", "iOS", "Android"],
+    tech: ["React Native", "TypeScript", "Expo", "Supabase"],
     link: "https://github.com/ryankoch13/ryn",
   },
   {
