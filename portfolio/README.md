@@ -1,6 +1,6 @@
 # React Vite Portfolio
 
-A personal portfolio site built with React and Vite. The site highlights my frontend and mobile engineering experience, selected projects, technical skills, and contact links.
+A personal portfolio site built with React and Vite. The site highlights my frontend and mobile engineering experience, selected projects, technical skills, and contact links. It is currently hosted at https://www.ryankoch.me/
 
 ## Tech Stack
 
