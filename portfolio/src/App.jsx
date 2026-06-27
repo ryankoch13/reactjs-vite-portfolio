@@ -17,14 +17,20 @@ const skills = [
     ],
   },
   {
-    category: "Cross-Platform",
-    items: ["Kotlin Multiplatform", "Reusable Components", "Design Systems"],
+    category: "AI-Enhanced Development",
+    items: [
+      "AI-Assisted Debugging",
+      "Prompt Engineering",
+      "OpenAI API",
+      "Workflow Automation",
+    ],
   },
   {
     category: "Backend & Tools",
     items: ["Python", "APIs", "Git", "CI/CD", "Debugging"],
   },
 ];
+
 
 const projects = [
   {
