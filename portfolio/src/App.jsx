@@ -31,7 +31,6 @@ const skills = [
   },
 ];
 
-
 const projects = [
   {
     title: "Alliance Ops",
@@ -40,7 +39,7 @@ const projects = [
     impact:
       "Built around real alliance management workflows, not just a demo concept",
     tech: ["React Native", "TypeScript", "Expo", "iOS", "Android"],
-    link: "https://github.com/ryankoch13/last-war-tracker"
+    link: "https://github.com/ryankoch13/last-war-tracker",
   },
   {
     title: "Ryn",
@@ -49,16 +48,15 @@ const projects = [
     impact:
       "Designed to make connecting and communicating feel fast and approachable",
     tech: ["React Native", "TypeScript", "iOS", "Android"],
-    link: "https://github.com/ryankoch13/ryn"
+    link: "https://github.com/ryankoch13/ryn",
   },
   {
-    title: "ChatGPT React Native Library",
+    title: "ChatGPT React Native",
     description:
-      "A React Native library designed to allow developers to easily integrate OpenAI's ChatGPT API into their mobile applications with reusable UI components, hooks, and backend examples.",
-    impact:
-      "Simplifies secure AI integration with reusable UI, hooks, and backend examples.",
-    tech: ["React Native", "TypeScript", "OpenAI API", "Express", "Next.js"],
-    link: "https://github.com/ryankoch13/chatgpt-react-native"
+      "Simplifies mobile AI integration with reusable components, hooks, and backend examples",
+    impact: "A starter kit for building AI-powered mobile apps with React Native and the OpenAI API",
+    tech: ["React Native", "OpenAI API", "Express", "Next.js"],
+    link: "https://github.com/ryankoch13/chatgpt-react-native",
   },
 ];
 
@@ -248,29 +246,29 @@ export default function App() {
           </div>
 
           <div className="projectsGrid">
-  {projects.map((project) => (
-    <a
-      className="projectCard"
-      key={project.title}
-      href={project.link}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={`View ${project.title} repository`}
-    >
-      <div>
-        <p className="cardLabel">{project.impact}</p>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-      </div>
+            {projects.map((project) => (
+              <a
+                className="projectCard"
+                key={project.title}
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`View ${project.title} repository`}
+              >
+                <div>
+                  <p className="cardLabel">{project.impact}</p>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
 
-      <div className="techStack">
-        {project.tech.map((tech) => (
-          <span key={tech}>{tech}</span>
-        ))}
-      </div>
-    </a>
-  ))}
-</div>
+                <div className="techStack">
+                  {project.tech.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
         </section>
 
         <section id="contact" className="section contactSection">
