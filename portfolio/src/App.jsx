@@ -34,6 +34,7 @@ const projects = [
     impact:
       "Built around real alliance management workflows, not just a demo concept",
     tech: ["React Native", "TypeScript", "Expo", "iOS", "Android"],
+    link: "https://github.com/ryankoch13/last-war-tracker"
   },
   {
     title: "Ryn",
@@ -42,14 +43,16 @@ const projects = [
     impact:
       "Designed to make connecting and communicating feel fast and approachable",
     tech: ["React Native", "TypeScript", "iOS", "Android"],
+    link: "https://github.com/ryankoch13/ryn"
   },
   {
-    title: "Cross-Platform Component Toolkit",
+    title: "ChatGPT React Native Library",
     description:
-      "A reusable component system built to improve UI consistency, reduce duplicated work, and support scalable mobile product development.",
+      "A React Native library designed to allow developers to easily integrate OpenAI's ChatGPT API into their mobile applications with reusable UI components, hooks, and backend examples.",
     impact:
-      "Helps teams move faster while keeping interfaces consistent across apps",
-    tech: ["React", "React Native", "TypeScript", "Kotlin"],
+      "Simplifies secure AI integration with reusable UI, hooks, and backend examples.",
+    tech: ["React Native", "TypeScript", "OpenAI API", "Express", "Next.js"],
+    link: "https://github.com/ryankoch13/chatgpt-react-native"
   },
 ];
 
@@ -239,22 +242,29 @@ export default function App() {
           </div>
 
           <div className="projectsGrid">
-            {projects.map((project) => (
-              <article className="projectCard" key={project.title}>
-                <div>
-                  <p className="cardLabel">{project.impact}</p>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                </div>
+  {projects.map((project) => (
+    <a
+      className="projectCard"
+      key={project.title}
+      href={project.link}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`View ${project.title} repository`}
+    >
+      <div>
+        <p className="cardLabel">{project.impact}</p>
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+      </div>
 
-                <div className="techStack">
-                  {project.tech.map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
+      <div className="techStack">
+        {project.tech.map((tech) => (
+          <span key={tech}>{tech}</span>
+        ))}
+      </div>
+    </a>
+  ))}
+</div>
         </section>
 
         <section id="contact" className="section contactSection">
