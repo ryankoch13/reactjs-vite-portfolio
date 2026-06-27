@@ -52,12 +52,12 @@ const projects = [
     link: "https://github.com/ryankoch13/ryn"
   },
   {
-    title: "ChatGPT React Native Library",
+    title: "ChatGPT React Native",
     description:
-      "A React Native library designed to allow developers to easily integrate OpenAI's ChatGPT API into their mobile applications with reusable UI components, hooks, and backend examples.",
+      "A React Native library that allows developers to easily integrate OpenAI's ChatGPT API into their mobile applications with reusable UI components, hooks, and backend examples.",
     impact:
-      "Simplifies secure AI integration with reusable UI, hooks, and backend examples.",
-    tech: ["React Native", "TypeScript", "OpenAI API", "Express", "Next.js"],
+      "Simplifies mobile AI integration with reusable components and backend examples",
+    tech: ["React Native", "OpenAI API", "Express", "Next.js"],
     link: "https://github.com/ryankoch13/chatgpt-react-native"
   },
 ];
