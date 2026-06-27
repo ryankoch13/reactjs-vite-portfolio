@@ -53,8 +53,8 @@ const projects = [
   {
     title: "ChatGPT React Native",
     description:
-      "Simplifies mobile AI integration with reusable components, hooks, and backend examples",
-    impact: "A starter kit for building AI-powered mobile apps with React Native and the OpenAI API",
+      "A starter kit for building AI-powered mobile apps with React Native and the OpenAI API.",
+    impact: "Simplifies mobile AI integration with reusable components, hooks, and backend examples",
     tech: ["React Native", "OpenAI API", "Express", "Next.js"],
     link: "https://github.com/ryankoch13/chatgpt-react-native",
   },
