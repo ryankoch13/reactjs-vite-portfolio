@@ -1,16 +1,86 @@
-# React + Vite
+# React Vite Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio site built with React and Vite. The site highlights my frontend and mobile engineering experience, selected projects, technical skills, and contact links. It is currently hosted at https://www.ryankoch.me/
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* React
+* Vite
+* JavaScript
+* CSS
+* Material UI icons
+* Local storage for theme/color preferences
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The React app lives inside the `portfolio` directory, so make sure to `cd` into that folder before running commands.
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/ryankoch13/reactjs-vite-portfolio.git
+cd reactjs-vite-portfolio/portfolio
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the local development server:
+
+```bash
+npm run dev
+```
+
+Vite will print a local development URL in the terminal, usually:
+
+```bash
+http://localhost:5173
+```
+
+Open that URL in your browser to view the site locally.
+
+## Build Locally
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The production-ready files will be generated in the `dist` folder.
+
+## Preview the Production Build
+
+After building, you can preview the production version locally with:
+
+```bash
+npm run preview
+```
+
+## Linting
+
+To run the linter:
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+reactjs-vite-portfolio/
+└── portfolio/
+    ├── public/
+    ├── src/
+    │   ├── App.jsx
+    │   ├── App.css
+    │   └── main.jsx
+    ├── index.html
+    ├── package.json
+    └── vite.config.js
+```
+
+## Notes
+
+This project is intended as a simple, responsive portfolio site. Most of the content is managed directly in `src/App.jsx`, while the visual styling, themes, responsive layout, and hover effects are handled in `src/App.css`.
