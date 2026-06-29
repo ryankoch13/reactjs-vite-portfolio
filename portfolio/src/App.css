@@ -608,53 +608,6 @@ h1 span {
   transform: translateY(-3px);
 }
 
-/* Hero feature card hover */
-
-.featuredCard {
-  position: relative;
-  overflow: hidden;
-}
-
-.featuredCard::after {
-  content: "";
-  position: absolute;
-  inset: auto -20% -45% -20%;
-  height: 55%;
-  background: var(--gradient);
-  filter: blur(48px);
-  opacity: 0;
-  transition: opacity 0.28s ease;
-}
-
-.featuredCard:hover {
-  transform: translateY(-6px);
-  border-color: rgba(236, 72, 153, 0.42);
-}
-
-.featuredCard:hover::after {
-  opacity: 0.22;
-}
-
-/* Skill card hover */
-
-.skillGroup:hover {
-  transform: translateY(-6px);
-  border-color: rgba(56, 189, 248, 0.42);
-  background: var(--surface-strong);
-}
-
-.skillGroup:hover .skillTags span {
-  border-color: rgba(139, 92, 246, 0.35);
-}
-
-/* Individual skill tag hover */
-
-.skillTags span:hover,
-.techStack span:hover {
-  transform: translateY(-2px) scale(1.03);
-  border-color: rgba(236, 72, 153, 0.55);
-}
-
 /* Project card hover upgrade */
 
 .projectCard::before {
@@ -698,21 +651,6 @@ h1 span {
 
 .projectCard:hover .techStack span {
   border-color: rgba(56, 189, 248, 0.4);
-}
-
-/* Stats hover */
-
-.statCard:hover {
-  transform: translateY(-5px);
-  border-color: rgba(139, 92, 246, 0.42);
-  background: var(--surface-strong);
-}
-
-.statCard:hover strong {
-  background: var(--gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 /* Keyboard accessibility */
