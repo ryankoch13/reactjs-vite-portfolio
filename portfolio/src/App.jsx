@@ -141,10 +141,10 @@ export default function App() {
             </h1>
 
             <p className="heroDescription">
-              I’m a mobile-focused engineer who turns complex product
-              requirements into reliable, user-friendly applications. I care
-              about clean code, smooth interfaces, and software that holds up in
-              the real world.
+              React Native Mobile Engineer with 4+ years shipping production iOS
+              and Android apps, specializing in TypeScript, native mobile
+              debugging, release workflows, secure digital identity products,
+              and AI-assisted development.
             </p>
 
             <div className="heroActions">
@@ -168,9 +168,9 @@ export default function App() {
               <p className="cardLabel">What I Do Best</p>
               <h2>Mobile engineering for real-world products</h2>
               <p>
-                React Native, TypeScript, debugging native issues, building
-                reusable UI systems, and shipping reliable apps across iOS and
-                Android.
+                React Native, TypeScript, production mobile development, native
+                iOS/Android debugging, reusable UI systems, and reliable app
+                releases from feature work through deployment.
               </p>
             </div>
 
@@ -204,19 +204,20 @@ export default function App() {
 
           <div className="aboutText">
             <p>
-              I specialize in building mobile and web applications with React
-              Native, React, TypeScript, and modern frontend tooling. My work
-              usually sits somewhere between product development, UI
-              implementation, architecture, and the occasional very stubborn
-              native mobile bug.
+              I’m a React Native Mobile Engineer focused on building
+              production-ready iOS and Android applications with React Native,
+              React, TypeScript, and modern frontend tooling. My work sits at
+              the intersection of product development, UI implementation, mobile
+              architecture, release support, and native troubleshooting.
             </p>
 
             <p>
-              I like building software that is clean under the hood and easy to
-              use on the surface. Whether I’m improving an existing app,
-              creating reusable components, or taking a feature from idea to
-              release, I focus on making the end result reliable, maintainable,
-              and genuinely useful.
+              I enjoy building software that feels simple to use but is
+              thoughtfully structured underneath. Whether I’m improving an
+              existing app, creating reusable components, debugging
+              cross-platform issues, or taking a feature from idea to release, I
+              care about making the end result reliable, maintainable, and
+              genuinely useful.
             </p>
           </div>
         </section>
