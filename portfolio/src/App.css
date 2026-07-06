@@ -219,12 +219,17 @@ h1 {
 }
 
 h1 span {
+  display: inline;
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  padding-inline: 0.06em;
-  margin-inline: -0.06em;
+
+  padding-inline: 0.1em;
+  margin-inline: -0.1em;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 @media (min-width: 1180px) {
@@ -354,6 +359,10 @@ h1 span {
   letter-spacing: 0.09em;
 }
 
+.cardLink {
+  margin-top: 18px;
+}
+
 .featuredCard h2 {
   margin-bottom: 14px;
   font-size: clamp(1.35rem, 2vw, 2.1rem);
@@ -397,10 +406,13 @@ h1 span {
 }
 
 .aboutSection {
-  display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(32px, 5vw, 54px);
   align-items: start;
+}
+
+.aboutSection .sectionTitle {
+  margin-bottom: 18px;
 }
 
 .sectionHeader {
@@ -422,7 +434,7 @@ h1 span {
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(14px, 2vw, 22px);
 }
 
@@ -435,6 +447,13 @@ h1 span {
 .skillGroup h3 {
   margin-bottom: 18px;
   font-size: 1.15rem;
+}
+
+.projectLinkText {
+  margin-top: 18px;
+  color: var(--muted-strong);
+  font-weight: 900;
+  font-size: 0.92rem;
 }
 
 .skillTags,
@@ -457,9 +476,11 @@ h1 span {
 }
 
 .projectsGrid {
+  --project-grid-gap: clamp(16px, 2vw, 24px);
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
-  gap: clamp(16px, 2vw, 24px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--project-grid-gap);
   align-items: stretch;
 }
 
@@ -661,6 +682,27 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+/* Helps prevent occasional resize repaint/clipping glitches */
+.siteShell,
+.section {
+  min-width: 0;
+  overflow: visible;
+}
+
+.header,
+.glassCard,
+.projectCard,
+.statCard,
+.skillGroup,
+.featuredCard,
+.orb {
+  transform: translateZ(0);
+}
+
+.orb {
+  pointer-events: none;
+}
+
 /* ----------------------------- */
 /* Responsive Layout */
 /* ----------------------------- */
@@ -754,8 +796,7 @@ button:focus-visible {
     padding-top: 44px;
   }
 
-  h1,
-  h1 span {
+  h1 {
     font-size: clamp(2.75rem, 13vw, 4.6rem);
     line-height: 1;
     letter-spacing: -0.075em;
@@ -797,5 +838,25 @@ button:focus-visible {
 
   .projectCard {
     min-height: 320px;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1080px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skillsGrid .skillGroup:last-child {
+    grid-column: 2;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projectsGrid .projectCard:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - var(--project-grid-gap)) / 2);
   }
 }
