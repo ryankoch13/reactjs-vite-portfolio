@@ -219,7 +219,6 @@ h1 {
 }
 
 h1 span {
-  display: inline-block;
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -397,10 +396,13 @@ h1 span {
 }
 
 .aboutSection {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(32px, 5vw, 54px);
+  align-items: start;
+}
+
+.aboutSection .sectionTitle {
+  margin-bottom: 18px;
 }
 
 .sectionHeader {
