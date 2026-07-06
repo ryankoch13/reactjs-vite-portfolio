@@ -146,7 +146,7 @@ export const projectsSection = {
       description:
         "A React Native starter project for building AI-powered mobile experiences with reusable UI patterns and OpenAI API integration.",
       impact:
-        "Shows practical AI integration patterns for mobile apps without exposing API keys in the client",
+        "Shows practical AI integration patterns for mobile apps without exposing API keys",
       tech: ["React Native", "OpenAI API", "Express", "Next.js"],
       link: "https://github.com/ryankoch13/chatgpt-react-native",
     },
