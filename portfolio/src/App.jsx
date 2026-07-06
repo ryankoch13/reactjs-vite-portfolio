@@ -35,7 +35,7 @@ const projects = [
   {
     title: "Alliance Ops",
     description:
-      "A React Native mobile dashboard designed to help strategy-game alliance leaders manage members, roles, events, and weekly participation from one place.",
+      "Role-based collaborative mobile operations dashboard with Supabase auth, Postgres, row-level security, shared alliance data, daily stat tracking, event scheduling, and assignment history.",
     impact:
       "Built around real alliance management workflows, not just a demo concept",
     tech: ["React Native", "TypeScript", "Expo", "iOS", "Android"],
@@ -53,8 +53,9 @@ const projects = [
   {
     title: "ChatGPT React Native",
     description:
-      "A starter kit for building AI-powered mobile apps with React Native and the OpenAI API.",
-    impact: "Simplifies mobile AI integration with reusable components, hooks, and backend examples",
+      "Simplifies mobile AI integration with reusable components, hooks, and backend examples.",
+    impact:
+      "A starter kit for building AI-powered mobile apps with React Native and the OpenAI API",
     tech: ["React Native", "OpenAI API", "Express", "Next.js"],
     link: "https://github.com/ryankoch13/chatgpt-react-native",
   },
@@ -301,6 +302,14 @@ export default function App() {
               rel="noreferrer"
             >
               GitHub
+            </a>
+            <a
+              className="button secondary"
+              href="/Ryan_Koch_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Resume
             </a>
           </div>
         </section>
