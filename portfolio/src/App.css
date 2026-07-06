@@ -353,6 +353,10 @@ h1 span {
   letter-spacing: 0.09em;
 }
 
+.cardLink {
+  margin-top: 18px;
+}
+
 .featuredCard h2 {
   margin-bottom: 14px;
   font-size: clamp(1.35rem, 2vw, 2.1rem);
@@ -424,7 +428,7 @@ h1 span {
 
 .skillsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(14px, 2vw, 22px);
 }
 
@@ -466,9 +470,11 @@ h1 span {
 }
 
 .projectsGrid {
+  --project-grid-gap: clamp(16px, 2vw, 24px);
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
-  gap: clamp(16px, 2vw, 24px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--project-grid-gap);
   align-items: stretch;
 }
 
@@ -670,6 +676,27 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+/* Helps prevent occasional resize repaint/clipping glitches */
+.siteShell,
+.section {
+  min-width: 0;
+  overflow: visible;
+}
+
+.header,
+.glassCard,
+.projectCard,
+.statCard,
+.skillGroup,
+.featuredCard,
+.orb {
+  transform: translateZ(0);
+}
+
+.orb {
+  pointer-events: none;
+}
+
 /* ----------------------------- */
 /* Responsive Layout */
 /* ----------------------------- */
@@ -805,5 +832,25 @@ button:focus-visible {
 
   .projectCard {
     min-height: 320px;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1080px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skillsGrid .skillGroup:last-child {
+    grid-column: 2;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projectsGrid .projectCard:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - var(--project-grid-gap)) / 2);
   }
 }

@@ -72,6 +72,7 @@ export default function App() {
             onClick={changeColorScheme}
             aria-label="Change color scheme"
           >
+            🎨
             <span className="themeText">Color</span>
           </button>
 
@@ -81,7 +82,7 @@ export default function App() {
             aria-label={themeLabel}
             aria-pressed={!isDark}
           >
-            <span>{isDark ? "☀️" : ""}</span>
+            <span>{isDark ? "☀️" : "🌙"}</span>
             <span className="themeText">{isDark ? "Light" : "Dark"}</span>
           </button>
         </div>
@@ -137,7 +138,7 @@ export default function App() {
 
         <section id="about" className="section aboutSection">
           <div>
-            <h2 className="sectionTitle">{about.title}</h2>
+            <h2 className="sectionTitle sectionHeader">{about.title}</h2>
           </div>
 
           <div className="aboutText">
@@ -194,7 +195,7 @@ export default function App() {
                   ))}
                 </div>
 
-                <span className="cardLabel">{projectsSection.repositoryCta}</span>
+                <span className="cardLabel cardLink">{projectsSection.repositoryCta}</span>
               </a>
             ))}
           </div>
