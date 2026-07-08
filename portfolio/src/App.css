@@ -243,19 +243,24 @@ h1 span {
 }
 
 .sectionTitle {
+  display: block;
+  width: 100%;
   max-width: 760px;
-  margin-bottom: 0;
+  margin: 0 auto;
+  padding-inline: 0;
+  text-align: center;
+  justify-self: auto;
   padding-bottom: 5px;
+
   font-size: clamp(1.9rem, 2.7vw, 3rem);
   line-height: 1.12;
   letter-spacing: -0.035em;
-  justify-self: center;
+
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  padding-inline: 0.06em;
-  margin-inline: -0.06em;
+  -webkit-text-fill-color: transparent;
 }
 .heroDescription {
   max-width: 680px;
@@ -413,8 +418,13 @@ h1 span {
 }
 
 .sectionHeader {
-  margin-bottom: 28px;
+  width: 100%;
+  margin: 0 auto 28px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .aboutText {
   display: grid;
