@@ -245,6 +245,7 @@ h1 span {
 .sectionTitle {
   max-width: 760px;
   margin-bottom: 0;
+  padding-bottom: 5px;
   font-size: clamp(1.9rem, 2.7vw, 3rem);
   line-height: 1.12;
   letter-spacing: -0.035em;
