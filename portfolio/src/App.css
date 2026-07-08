@@ -28,6 +28,32 @@
   --shadow: 0 24px 90px rgba(99, 102, 241, 0.18);
 }
 
+[data-theme="light"] .glassCard,
+[data-theme="light"] .projectCard,
+[data-theme="light"] .statCard {
+  border-color: rgba(86, 52, 128, 0.16);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.68) 45%,
+      rgba(255, 255, 255, 0.5)
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(139, 92, 246, 0.12),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(56, 189, 248, 0.1),
+      transparent 34%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 24px 70px rgba(99, 102, 241, 0.16);
+}
+
 [data-scheme="aurora"] {
   --purple: #8b5cf6;
   --pink: #ec4899;
@@ -337,10 +363,34 @@ h1 span {
 .glassCard,
 .projectCard,
 .statCard {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.07) 42%,
+      rgba(255, 255, 255, 0.03)
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(139, 92, 246, 0.18),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(56, 189, 248, 0.12),
+      transparent 34%
+    ),
+    var(--surface);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 24px 90px rgba(139, 92, 246, 0.22);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .featuredCard {
@@ -639,6 +689,7 @@ h1 span {
 /* Project card hover upgrade */
 
 .projectCard::before {
+  z-index: 0;
   content: "";
   position: absolute;
   inset: 0;
@@ -696,18 +747,46 @@ button:focus-visible {
   overflow: visible;
 }
 
-.header,
-.glassCard,
-.projectCard,
-.statCard,
-.skillGroup,
-.featuredCard,
-.orb {
-  transform: translateZ(0);
-}
-
 .orb {
   pointer-events: none;
+}
+
+.glassCard,
+.projectCard,
+.statCard {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow);
+}
+
+.glassCard::after,
+.projectCard::after,
+.statCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.22),
+      transparent 28%,
+      transparent 68%,
+      rgba(255, 255, 255, 0.08)
+    );
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.glassCard > *,
+.projectCard > *,
+.statCard > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ----------------------------- */
