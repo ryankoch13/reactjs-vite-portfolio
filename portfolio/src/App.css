@@ -219,17 +219,13 @@ h1 {
 }
 
 h1 span {
-  display: inline;
   background: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-
-  padding-inline: 0.1em;
-  margin-inline: -0.1em;
-
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  -webkit-text-fill-color: transparent;
+  padding-inline: 0.06em;
+  margin-inline: -0.06em;
 }
 
 @media (min-width: 1180px) {
